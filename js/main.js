@@ -9,7 +9,7 @@ $(document).ready(function() {
 						var num = inc //* /*( (ind < max / 2) ? ind * .05;/* : (ind - (retract)) * .05);*/
 						document.body.scrollTop += num;
 
-						console.log(num);
+						//console.log(num);
 
 						scrollDown(ind+1, inc, max, retract + 1);
 					}, 0);
@@ -25,7 +25,7 @@ $(document).ready(function() {
 						var num = inc //* /*( (ind < max / 2) ? ind * .05;/* : (ind - (retract)) * .05);*/
 						document.body.scrollTop -= num;
 
-						console.log(num);
+						//console.log(num);
 
 						scrollUp(ind+1, inc, max, retract + 1);
 					}, 0);
@@ -48,18 +48,18 @@ $(document).ready(function() {
 		document.body.clientHeight = document.body.clientHeight ||
 																document.getElementsByTagName("body")[0].clientHeight;
 
-		console.log(document.body.scrollTop, document.body.offsetHeight, document.body.clientHeight)
+		//console.log(document.body.scrollTop, document.body.offsetHeight, document.body.clientHeight)
 		if($(id).offset().top > document.body.scrollTop + 100) {
 			var scrollDown = function(ind, inc, max) {
 				ind = ind || 0;
 
 				if(document.body.scrollTop < $(id).offset().top - 50 &&
-				document.body.scrollTop < (document.body.offsetHeight - document.body.clientHeight) - 100) {
+				document.body.scrollTop < (document.body.offsetHeight - document.body.clientHeight) - 50) {
 					setTimeout(function() {
 						var num = inc;
 						document.body.scrollTop += num;
 
-						console.log(num);
+						//console.log(num);
 
 						scrollDown(ind+1, inc, max);
 					}, 0);
@@ -81,7 +81,7 @@ $(document).ready(function() {
 						var num = inc;
 						document.body.scrollTop -= num;
 
-						console.log(num);
+						//console.log(num);
 
 						scrollUp(ind+1, inc, max);
 					}, 0);
